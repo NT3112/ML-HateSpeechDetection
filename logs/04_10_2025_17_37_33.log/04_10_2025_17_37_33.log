@@ -1,0 +1,9 @@
+[ 2025-04-10 17:37:35,970 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2025-04-10 17:37:36,321 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 17:37:36,321 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 17:37:36,321 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 17:37:36,321 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 17:37:37,585 ] uvicorn.error - INFO - Will watch for changes in these directories: ['D:\\Personal\\ML\\ML']
+[ 2025-04-10 17:37:37,585 ] uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[ 2025-04-10 17:37:37,585 ] uvicorn.error - INFO - Started reloader process [10856] using StatReload
+[ 2025-04-10 17:51:30,029 ] uvicorn.error - INFO - Stopping reloader process [10856]

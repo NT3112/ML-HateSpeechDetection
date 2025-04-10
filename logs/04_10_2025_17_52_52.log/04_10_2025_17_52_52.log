@@ -1,0 +1,79 @@
+[ 2025-04-10 17:52:58,016 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2025-04-10 17:52:59,314 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 17:52:59,314 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 17:52:59,318 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 17:52:59,318 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 17:53:02,228 ] asyncio - DEBUG - Using selector: SelectSelector
+[ 2025-04-10 17:53:02,248 ] uvicorn.error - INFO - Started server process [19240]
+[ 2025-04-10 17:53:02,249 ] uvicorn.error - INFO - Waiting for application startup.
+[ 2025-04-10 17:53:02,251 ] uvicorn.error - INFO - Application startup complete.
+[ 2025-04-10 17:56:08,272 ] root - INFO - Entered the run_pipeline method of PredictionPipeline class
+[ 2025-04-10 17:56:08,272 ] root - INFO - Loading model from cloud
+[ 2025-04-10 17:56:18,218 ] root - INFO - Exited the get model method
+[ 2025-04-10 17:56:18,218 ] root - INFO - Running the predict function
+[ 2025-04-10 17:56:18,218 ] root - INFO - Loading model from cloud
+[ 2025-04-10 17:56:26,861 ] root - INFO - Exited the get model method
+[ 2025-04-10 17:56:26,861 ] uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py", line 42, in predict
+    load_model=keras.models.load_model(best_model_path)
+  File "D:\anaconda\envs\hate\lib\site-packages\keras\utils\traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "D:\anaconda\envs\hate\lib\site-packages\keras\saving\save.py", line 222, in load_model
+    raise IOError(
+OSError: Unable to load model. Filepath is not an hdf5 file (or h5py is not available) or SavedModel. Received: filepath=None
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py", line 71, in run_pipeline
+    predicted_text = self.predict(best_model_path,text)
+  File "D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py", line 63, in predict
+    raise CustomException(e, sys) from e
+hate.exception.CustomException: Error occurred python script name [D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py] line number [42] error message [Unable to load model. Filepath is not an hdf5 file (or h5py is not available) or SavedModel. Received: filepath=None]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Personal\ML\ML\app.py", line 34, in predict_route
+    text=obj.run_pipeline(text)
+  File "D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py", line 75, in run_pipeline
+    raise CustomException(e, sys) from e
+hate.exception.CustomException: Error occurred python script name [D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py] line number [71] error message [Error occurred python script name [D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py] line number [42] error message [Unable to load model. Filepath is not an hdf5 file (or h5py is not available) or SavedModel. Received: filepath=None]]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\anaconda\envs\hate\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\anaconda\envs\hate\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\anaconda\envs\hate\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\anaconda\envs\hate\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\anaconda\envs\hate\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\anaconda\envs\hate\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\anaconda\envs\hate\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "D:\anaconda\envs\hate\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Personal\ML\ML\app.py", line 37, in predict_route
+    raise CustomException(e,sys) from e
+hate.exception.CustomException: Error occurred python script name [D:\Personal\ML\ML\app.py] line number [34] error message [Error occurred python script name [D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py] line number [71] error message [Error occurred python script name [D:\Personal\ML\ML\hate\pipeline\prediction_pipeline.py] line number [42] error message [Unable to load model. Filepath is not an hdf5 file (or h5py is not available) or SavedModel. Received: filepath=None]]]

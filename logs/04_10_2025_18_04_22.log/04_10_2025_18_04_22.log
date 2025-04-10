@@ -1,0 +1,17 @@
+[ 2025-04-10 18:04:24,817 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2025-04-10 18:04:25,631 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 18:04:25,631 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 18:04:25,631 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 18:04:25,633 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 18:04:28,455 ] asyncio - DEBUG - Using selector: SelectSelector
+[ 2025-04-10 18:04:28,471 ] uvicorn.error - INFO - Started server process [1404]
+[ 2025-04-10 18:04:28,487 ] uvicorn.error - INFO - Waiting for application startup.
+[ 2025-04-10 18:04:28,487 ] uvicorn.error - INFO - Application startup complete.
+[ 2025-04-10 18:05:18,306 ] root - INFO - Entered the run_pipeline method of PredictionPipeline class
+[ 2025-04-10 18:05:18,306 ] root - INFO - Loading model from cloud
+[ 2025-04-10 18:05:27,231 ] root - INFO - Exited the get model method
+[ 2025-04-10 18:05:27,231 ] root - INFO - Running the predict function
+[ 2025-04-10 18:05:27,234 ] h5py._conv - DEBUG - Creating converter from 3 to 5
+[ 2025-04-10 18:05:28,159 ] root - INFO - Entered into the concat_data_cleaning function
+[ 2025-04-10 18:05:28,167 ] root - INFO - Exited the concat_data_cleaning function
+[ 2025-04-10 18:05:28,767 ] root - INFO - Exited the run_pipeline method of PredictionPipeline class

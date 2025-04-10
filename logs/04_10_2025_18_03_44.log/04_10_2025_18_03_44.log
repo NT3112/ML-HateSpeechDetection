@@ -1,0 +1,9 @@
+[ 2025-04-10 18:03:47,430 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2025-04-10 18:03:48,285 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 18:03:48,285 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 18:03:48,285 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2025-04-10 18:03:48,285 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2025-04-10 18:03:51,548 ] asyncio - DEBUG - Using selector: SelectSelector
+[ 2025-04-10 18:03:51,573 ] uvicorn.error - INFO - Started server process [24080]
+[ 2025-04-10 18:03:51,574 ] uvicorn.error - INFO - Waiting for application startup.
+[ 2025-04-10 18:03:51,574 ] uvicorn.error - INFO - Application startup complete.
